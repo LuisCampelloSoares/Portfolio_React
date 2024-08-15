@@ -1,0 +1,12 @@
+.footer ul{
+    display: flex;
+    list-style: none;  
+    justify-content: center;
+    padding: 0px;
+}
+.footer a{
+    color: white !important;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+}
