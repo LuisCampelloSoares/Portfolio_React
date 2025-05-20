@@ -13,6 +13,32 @@
     cursor: pointer;
     transition: 0.5s;
 }
+.statusBadge {
+  display: inline-block;
+  background-color: #f39c12; 
+  color: white;
+  font-weight: bold;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+.statusBadge:hover {
+  background-color: #d17c0b;
+  color: #fffacd;
+  cursor: default;
+    animation: pulse 1s infinite;
+}
+.statusNote {
+  font-size: 0.85rem;
+  color: #f39c12;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
 .cards section{
     background-color: #01091c75;
     border-radius: 15px;

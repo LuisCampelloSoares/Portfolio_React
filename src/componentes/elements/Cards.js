@@ -2,7 +2,7 @@ import styles from './Cards.module.css';
 import ButtonB from './ButtonB'
 import { useState } from 'react'
 
-function Cards({img, title, tech, description, repo}){
+function Cards({img, title, tech, description, repo, status}){
     const [info, setInfo] = useState(false);
     function InfoOn(){
         setInfo(true)
@@ -19,10 +19,20 @@ function Cards({img, title, tech, description, repo}){
             <a onMouseEnter={InfoOn} href={repo}> <img src={img} alt='Imagem do projeto'></img></a>
             {info === true &&(
                 <section>
-                    <h3>{title}</h3>
+                   <h2 className={styles.title}>
+                        {title}
+                        {status && (
+                            <span className={styles.statusBadge}>
+                                {status}
+                            </span>
+                        )}
+                    </h2>
                     <p><strong>Tecnologia: </strong>{tech}</p>
                     <p>{description}</p>
-                    <ButtonB text='Acesse o repositório'/>
+                    <a href={repo} target="_blank"  >  
+                        <ButtonB text='Acesse o repositório'/>
+                    </a>
+                   
                 </section>
             )}
         </div>

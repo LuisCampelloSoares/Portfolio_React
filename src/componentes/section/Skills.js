@@ -3,6 +3,7 @@ import mongodb from '../../image/Skills/mongodb.svg'
 import typescript from '../../image/Skills/typescript.svg'
 import reactimg from '../../image/Skills/react-img.svg'
 import javascript from '../../image/Skills/javascript-logo.svg'
+import java from '../../image/Skills/java.svg'
 import sql from '../../image/Skills/MySQL.svg'
 
 function Skills (){
@@ -15,6 +16,7 @@ function Skills (){
                 <img src={typescript}></img>
                 <img src={mongodb}></img>
                 <img src={javascript}></img>
+                <img src={java}></img>
                 <img src={sql}></img>
             </div>
         </div>

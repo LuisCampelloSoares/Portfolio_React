@@ -4,4 +4,12 @@
     border: #74FAC0 1px solid;
     padding: 1rem;
     border-radius: 10px;
+    transition: all 0.3s ease; 
+
+}
+button:hover{
+    background-color: #74FAC0;
+    color: #000; 
+    cursor: pointer;
+
 }
