@@ -1,52 +1,90 @@
-.cards{
-    display: flex;
-    justify-content: center;
-    margin: 2rem;
+.cards {
+    position: relative;
+    width: 100%;
+    max-width: 700px; 
+    overflow: hidden; 
+    border-radius: 15px; 
 }
-.cards img{
-    width: 500px;
-    transition: 0.5s;
-    margin-right: 2rem;
+
+.cards img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    display: block; 
+    border-radius: 15px; 
 }
-.cards img:hover{
-    transform: translateY(-10px);
+
+.cards:hover img {
+    transform: scale(1.03);
     cursor: pointer;
-    transition: 0.5s;
 }
+
 .statusBadge {
-  display: inline-block;
-  background-color: #f39c12; 
-  color: white;
-  font-weight: bold;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
+    display: inline-block;
+    background-color: #f39c12; 
+    color: white;
+    font-weight: bold;
+    padding: 0.25rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
 }
+
 .statusBadge:hover {
-  background-color: #d17c0b;
-  color: #fffacd;
-  cursor: default;
+    background-color: #d17c0b;
+    color: #fffacd;
+    cursor: default;
     animation: pulse 1s infinite;
 }
+
 .statusNote {
-  font-size: 0.85rem;
-  color: #f39c12;
-  margin-top: 0.5rem;
-  font-style: italic;
-}
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+    font-size: 0.85rem;
+    color: #f39c12;
+    margin-top: 0.5rem;
+    font-style: italic;
 }
 
-.cards section{
-    background-color: #01091c75;
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.buttonContainer {
+    margin-top: auto;
+}
+
+.cards section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 9, 28, 0.85); /* Fundo mais escuro e mais opaco */
     border-radius: 15px;
     padding: 1.5rem;
-    width: 500px;
-    filter: drop-shadow(0px 4px 4px rgb(0, 0, 0));
-}
-.cards h3{
-    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho */
 }
 
+.cards:hover section {
+    opacity: 1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Media query para telas menores */
+@media (max-width: 992px) {
+    .cards {
+        max-width: 100%;
+    }
+}

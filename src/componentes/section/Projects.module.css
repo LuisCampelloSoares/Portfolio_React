@@ -1,8 +1,33 @@
-.projects{
+.projects {
     margin-left: 5rem;  
     text-align: left;
-}
-.projects h1{
-    font-size: 45px;
+    padding: 2rem 0;
 }
 
+.projects h1 {
+    font-size: 45px;
+    margin-bottom: 2rem;
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exatamente 2 cards por linha */
+    gap: 5rem 8rem; /* Maior espaçamento horizontal para acomodar as descrições */
+    align-items: start; /* evita desalinhamento vertical */
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima para não ficar muito esticado */
+    margin: 0 auto 2rem auto;
+    overflow: visible;
+}
+
+/* Responsivo para telas menores (ex: celular) */
+@media (max-width: 992px) {
+    .cardsGrid {
+        grid-template-columns: 1fr; /* 1 card por linha em telas menores */
+    }
+    
+    .projects {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

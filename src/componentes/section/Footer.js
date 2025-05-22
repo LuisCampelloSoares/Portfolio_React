@@ -14,7 +14,7 @@ function Footer (){
                 <p>Luisoares2901@gmail.com</p>
             </div>
             <div>
-                <p>Luis Felipe © 2024</p>
+                <p>Luis Felipe © 2025</p>
             </div>
         </div>
     )

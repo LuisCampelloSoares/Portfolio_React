@@ -40,7 +40,7 @@ function Presentation (){
                 profissional, desenvolvi projetos em Front-end e Back-end. Adoro novos desafios e resolver<br></br>
                 problemas e trazer soluções completas e entregas rápidas
             </p>
-            <ButtonA text='Conecte-se comigo!!'/>
+            <a href='https://www.linkedin.com/in/luis-felipe-campello-soares-689870236/' target="_blank"><ButtonA text='Conecte-se comigo!!' /></a>
         </div>
     )
     
